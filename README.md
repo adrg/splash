@@ -95,23 +95,30 @@ func main() {
 	// Parsing styles
 	// Format: foreground:background+attributes
 	attr := splash.ParseStyle("+b")
-	attrs := splash.ParseStyle("+bu")
-	fg := splash.ParseStyle("yellow")
-	bg := splash.ParseStyle(":red")
-	fgAttr := splash.ParseStyle("green+b")
-	bgAttr := splash.ParseStyle(":magenta+u")
-	fgBg := splash.ParseStyle("cyan:red")
-	fgBgAttr := splash.ParseStyle("yellow:blue+b")
-	fgBgAttrs := splash.ParseStyle("red:green+br")
-
 	fmt.Println(attr.Sprint("Bold"))
+
+	attrs := splash.ParseStyle("+bu")
 	fmt.Println(attrs.Sprint("Bold, underline"))
+
+	fg := splash.ParseStyle("yellow")
 	fmt.Println(fg.Sprint("Yellow foreground"))
+
+	bg := splash.ParseStyle(":red")
 	fmt.Println(bg.Sprint("Red background"))
+
+	fgAttr := splash.ParseStyle("green+b")
 	fmt.Println(fgAttr.Sprint("Green foreground, bold"))
+
+	bgAttr := splash.ParseStyle(":magenta+u")
 	fmt.Println(bgAttr.Sprint("Magenta background, underline"))
+
+	fgBg := splash.ParseStyle("cyan:red")
 	fmt.Println(fgBg.Sprint("Cyan foreground, red background"))
+
+	fgBgAttr := splash.ParseStyle("yellow:blue+b")
 	fmt.Println(fgBgAttr.Sprint("Yellow foreground, blue background, bold"))
+
+	fgBgAttrs := splash.ParseStyle("red:green+br")
 	fmt.Println(fgBgAttrs.Sprint("Red foreground, green background, bold, reverse"))
 }
 ```
