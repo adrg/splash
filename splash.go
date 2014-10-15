@@ -64,30 +64,48 @@ var colors map[string]Property = map[string]Property{
 	"white":   White,
 }
 
+// Property represents either a color (foreground or background) or a text
+// attribute (bold, underline, etc.).
 type Property int
 
+// String returns the printable string representation of the property.
 func (p Property) String() string {
 	return fmt.Sprintf("\u001b[%dm", p)
 }
 
+// Sprint formats using the default formats for its operands and returns the
+// resulting string. Spaces are added between operands when neither is a
+// string. The output string is wrapped in the value of the property and
+// a reset is applied at end.
 func (p Property) Sprint(a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s", p, fmt.Sprint(a...), Reset)
 }
 
+// Sprintf formats according to a format specifier and returns the
+// resulting string. The output string is wrapped in the value of the property
+// and a style is applied at end.
 func (p Property) Sprintf(format string, a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s", p, fmt.Sprintf(format, a...), Reset)
 }
 
+// Sprintln formats using the default formats for its operands and returns
+// the resulting string. Spaces are always added between operands and a
+// newline is appended. The output string is wrapped in the value of the
+// property and a reset is applied at end.
 func (p Property) Sprintln(a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s\n", p, fmt.Sprint(a...), Reset)
 }
 
+// Style is a reusable collection of properties.
 type Style []Property
 
+// NewStyle returns a new style from property arguments passed in.
 func NewStyle(props ...Property) Style {
 	return props
 }
 
+// ParseStyle returns a new style from the properties specified in the style
+// parameter.
 func ParseStyle(style string) Style {
 	props := []Property{}
 
@@ -126,6 +144,7 @@ func ParseStyle(style string) Style {
 	return props
 }
 
+// String returns the printable string representation of the style.
 func (s Style) String() string {
 	var buffer bytes.Buffer
 	for _, prop := range s {
@@ -135,14 +154,25 @@ func (s Style) String() string {
 	return buffer.String()
 }
 
+// Sprint formats using the default formats for its operands and returns the
+// resulting string. Spaces are added between operands when neither is a
+// string. The output string is wrapped in the value of the style and a reset
+// is applied at end.
 func (s Style) Sprint(a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s", s, fmt.Sprint(a...), Reset)
 }
 
+// Sprintf formats according to a format specifier and returns the
+// resulting string. The output string is wrapped in the value of the style
+// and a reset is applied at end.
 func (s Style) Sprintf(format string, a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s", s, fmt.Sprintf(format, a...), Reset)
 }
 
+// Sprintln formats using the default formats for its operands and returns
+// the resulting string. Spaces are always added between operands and a
+// newline is appended. The output string is wrapped in the value of the style
+// and a reset is applied at end.
 func (s Style) Sprintln(a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s\n", s, fmt.Sprint(a...), Reset)
 }
