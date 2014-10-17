@@ -109,7 +109,7 @@ func NewStyle(props ...Property) Style {
 func ParseStyle(style string) Style {
 	props := []Property{}
 
-	style = strings.ToLower(strings.Replace(style, " ", "", -1))
+	style = strings.TrimSpace(strings.Replace(style, " ", "", -1))
 	if style == "" {
 		return props
 	}
@@ -129,7 +129,7 @@ func ParseStyle(style string) Style {
 	}
 
 	// Parse colors
-	tokens = strings.Split(tokens[0], ":")
+	tokens = strings.Split(strings.ToLower(tokens[0]), ":")
 	if prop, ok := colors[tokens[0]]; ok {
 		props = append(props, prop)
 	}
