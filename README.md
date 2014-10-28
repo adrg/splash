@@ -21,13 +21,13 @@ coding standpoint, there is no difference between using a property and a style.
 
 Full documentation can be found at: http://godoc.org/github.com/adrg/splash
 
-##Installation
+## Installation
 ```
 go get github.com/adrg/splash
 ```
-##Usage
+## Usage
 
-####Properties
+#### Properties
 ```go
 package main
 
@@ -70,7 +70,7 @@ func main() {
 Output:
 ![properties output](https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/properties.png)
 
-####Styles
+#### Styles
 ```go
 package main
 
