@@ -51,7 +51,7 @@ func main() {
 	fmt.Printf("%s%s%s\n", splash.Red, "Roses are red", reset)
 	fmt.Printf("%s%s%s\n", splash.BgGreen, "Here's something new:", reset)
 	fmt.Printf("%s%s%s\n", splash.Magenta, "Violets are violet", reset)
-	fmt.Printf("%s%s%s\n", splash.BgBlue, "Not freaking blue!", reset)
+	fmt.Printf("%s%s%s\n", splash.BgBlue, "Not freaking blue!")
 
 	fmt.Println(reset)
 
