@@ -7,6 +7,7 @@ import (
 )
 
 const (
+	// Attributes
 	Reset Property = iota
 	Bold
 	Dim
@@ -20,6 +21,7 @@ const (
 )
 
 const (
+	// Foreground colors
 	Black Property = iota + 30
 	Red
 	Green
@@ -31,6 +33,7 @@ const (
 )
 
 const (
+	// Background colors
 	BgBlack Property = iota + 40
 	BgRed
 	BgGreen
@@ -41,7 +44,7 @@ const (
 	BgWhite
 )
 
-var attributes map[rune]Property = map[rune]Property{
+var attributes = map[rune]Property{
 	'b': Bold,
 	'd': Dim,
 	'i': Italic,
@@ -53,7 +56,7 @@ var attributes map[rune]Property = map[rune]Property{
 	'c': CrossedOut,
 }
 
-var colors map[string]Property = map[string]Property{
+var colors = map[string]Property{
 	"black":   Black,
 	"red":     Red,
 	"green":   Green,
