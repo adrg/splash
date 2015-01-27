@@ -1,5 +1,5 @@
 /*
-Splash is a small package which gives you the ability to style terminal output.
+Package splash gives you the ability to style terminal output.
 It provides a set of types and functions to allow coloring and styling of
 output text. It can be useful in CLI applications or logging libraries.
 
