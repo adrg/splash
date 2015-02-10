@@ -43,17 +43,13 @@ func main() {
 	// Using text attributes
 	fmt.Printf("%s%s%s ", splash.Bold, "To boldly go", reset)
 	fmt.Printf("%s%s%s ", splash.Underline, "where no man", reset)
-	fmt.Printf("%s%s\n", splash.Reverse, "has gone before.")
-
-	fmt.Println(reset)
+	fmt.Printf("%s%s%s\n", splash.Reverse, "has gone before.", reset)
 
 	// Using foreground and background colors
 	fmt.Printf("%s%s%s\n", splash.Red, "Roses are red", reset)
 	fmt.Printf("%s%s%s\n", splash.BgGreen, "Here's something new:", reset)
 	fmt.Printf("%s%s%s\n", splash.Magenta, "Violets are violet", reset)
-	fmt.Printf("%s%s%s\n", splash.BgBlue, "Not freaking blue!")
-
-	fmt.Println(reset)
+	fmt.Printf("%s%s%s\n", splash.BgBlue, "Not freaking blue!", reset)
 
 	// Combining colors with text attributes
 	fmt.Printf("%s%s%s%s\n", splash.Bold, splash.Green, "Hint: lamp", reset)
