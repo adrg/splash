@@ -67,6 +67,12 @@ var colors = map[string]Property{
 	"white":   White,
 }
 
+// WrapPromptString encloses the input string meant to be displayed in
+// the shell prompt string in the escape sequences \[ and \].
+func WrapPromptString(str string) string {
+	return fmt.Sprintf(`\[%s\]`, str)
+}
+
 // Property represents either a color (foreground or background) or a text
 // attribute (bold, underline, etc.).
 type Property int
