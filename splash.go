@@ -105,6 +105,13 @@ func (p Property) PromptEscape() string {
 	return fmt.Sprintf(`\[%s\]`, p)
 }
 
+// PromptString styles the input string, escaping the property in order for it
+// to be displayed in the shell prompt string. A prompt escaped style reset is
+// also applied at the end of the output string.
+func (p Property) PromptString(str string) string {
+	return fmt.Sprintf("%s%s%s", p.PromptEscape(), str, Reset.PromptEscape())
+}
+
 // Style is a reusable collection of properties.
 type Style []Property
 
@@ -190,4 +197,11 @@ func (s Style) Sprintln(a ...interface{}) string {
 // string in the escape sequences \[ and \].
 func (s Style) PromptEscape() string {
 	return fmt.Sprintf(`\[%s\]`, s)
+}
+
+// PromptString styles the input string, escaping the style in order for it to
+// be displayed in the shell prompt string. A prompt escaped style reset is
+// also applied at the end of the output string.
+func (s Style) PromptString(str string) string {
+	return fmt.Sprintf("%s%s%s", s.PromptEscape(), str, Reset.PromptEscape())
 }
