@@ -67,12 +67,6 @@ var colors = map[string]Property{
 	"white":   White,
 }
 
-// WrapPromptString encloses the input string meant to be displayed in
-// the shell prompt string in the escape sequences \[ and \].
-func WrapPromptString(str string) string {
-	return fmt.Sprintf(`\[%s\]`, str)
-}
-
 // Property represents either a color (foreground or background) or a text
 // attribute (bold, underline, etc.).
 type Property int
@@ -103,6 +97,12 @@ func (p Property) Sprintf(format string, a ...interface{}) string {
 // property and a reset is applied at end.
 func (p Property) Sprintln(a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s\n", p, fmt.Sprint(a...), Reset)
+}
+
+// PromptEscape encloses the property to be displayed in the shell prompt
+// string in the escape sequences \[ and \].
+func (p Property) PromptEscape() string {
+	return fmt.Sprintf(`\[%s\]`, p)
 }
 
 // Style is a reusable collection of properties.
@@ -184,4 +184,10 @@ func (s Style) Sprintf(format string, a ...interface{}) string {
 // and a reset is applied at end.
 func (s Style) Sprintln(a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s\n", s, fmt.Sprint(a...), Reset)
+}
+
+// PromptEscape encloses the style to be displayed in the shell prompt
+// string in the escape sequences \[ and \].
+func (s Style) PromptEscape() string {
+	return fmt.Sprintf(`\[%s\]`, s)
 }
