@@ -26,7 +26,7 @@ Styles provide the ability to store a group of properties and reuse them when ne
 Both types come with the familiar [String](http://godoc.org/fmt#String),
 [Sprint](http://godoc.org/fmt#Sprint), [Sprintf](http://godoc.org/fmt#Sprintf)
 and [Sprintln](http://godoc.org/fmt#Sprintf) methods which are used the same as
-the ones in the [fmt](http://godoc.org/fmt) package. Moreover, from a coding
+the ones in the [fmt](http://godoc.org/fmt) package. Moreover, from a programming
 standpoint, there is no difference between using a property and a style.
 
 Full documentation can be found at https://pkg.go.dev/github.com/adrg/splash.

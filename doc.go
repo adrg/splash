@@ -1,16 +1,15 @@
 /*
-Package splash gives you the ability to style terminal output.
-It provides a set of types and functions to allow coloring and styling of
-output text. It can be useful in CLI applications or logging libraries.
+Package splash allows styling terminal output. It provides a set of types and
+functions to facilitate coloring and styling of output text. It can be useful
+in CLI applications or logging libraries.
 
-The core of the package is the Property type. A property represents either
-a color (foreground or background) or a text attribute (bold, underline, etc.).
-The package also defines the Style type which is just a collection of
-properties. Styles provide the ability to store a group of properties and
-reuse them when needed. Both types come with the familiar String(), Sprint(),
-Sprintf() and Sprintln() methods which are used exactly the same as the ones
-in package fmt. Moreover, from a coding standpoint, there is no difference
-between using a property and a style.
+The core of the package is the Property type. A property represents either a
+color (foreground or background) or a text attribute (bold, underline, etc.).
+The package also defines the Style type which is a collection of properties.
+Styles provide the ability to store a group of properties and reuse them when needed.
+Both types come with the familiar String, Sprint, Sprintf and Sprintln methods
+which are used the same as the ones in the fmt package. Moreover, from a programming
+standpoint, there is no difference between using a property and a style.
 
 Usage
 
