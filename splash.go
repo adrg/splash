@@ -84,9 +84,9 @@ func (p Property) Sprint(a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s", p, fmt.Sprint(a...), Reset)
 }
 
-// Sprintf formats according to a format specifier and returns the
-// resulting string. The output string is wrapped in the value of the property
-// and a style is applied at end.
+// Sprintf formats according to a format specifier and returns the resulting
+// string. The output string is wrapped in the value of the property and a
+// style is applied at end.
 func (p Property) Sprintf(format string, a ...interface{}) string {
 	return fmt.Sprintf("%s%s%s", p, fmt.Sprintf(format, a...), Reset)
 }
@@ -134,7 +134,7 @@ func ParseStyle(style string) Style {
 		return append(props, Reset)
 	}
 
-	// Parse attributes
+	// Parse attributes.
 	tokens := strings.Split(style, "+")
 	if len(tokens) > 1 {
 		for _, attr := range tokens[1] {
@@ -144,15 +144,15 @@ func ParseStyle(style string) Style {
 		}
 	}
 
-	// Parse colors
+	// Parse colors.
 	tokens = strings.Split(strings.ToLower(tokens[0]), ":")
 	if prop, ok := colors[tokens[0]]; ok {
 		props = append(props, prop)
 	}
 
 	if len(tokens) > 1 {
+		// Add property as a background color.
 		if prop, ok := colors[tokens[1]]; ok {
-			// Add property as a background color
 			props = append(props, prop+10)
 		}
 	}
