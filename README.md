@@ -22,7 +22,6 @@ The core of the package is the **Property** type. A property represents either
 a color (foreground or background) or a text attribute (bold, underline, etc.).
 The package also defines the **Style** type which is a collection of properties.
 Styles provide the ability to store a group of properties and reuse them when needed.
-
 Both types come with the familiar [String](http://godoc.org/fmt#String),
 [Sprint](http://godoc.org/fmt#Sprint), [Sprintf](http://godoc.org/fmt#Sprintf)
 and [Sprintln](http://godoc.org/fmt#Sprintf) methods which are used the same as
