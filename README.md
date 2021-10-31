@@ -73,7 +73,7 @@ func main() {
 }
 ```
 
-<img alt="properties output" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/properties.png" width="100%">
+<img alt="properties output" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/properties.png" width="100%" />
 
 #### Styles
 ```go
@@ -128,11 +128,11 @@ func main() {
 }
 ```
 
-<img alt="styles output" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/styles.png" width="100%">
+<img alt="styles output" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/styles.png" width="100%" />
 
 ## Property reference
 
-<img alt="property reference" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/colors.png" width="100%">
+<img alt="property reference" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/colors.png" width="100%" />
 
 **Foreground colors**
 ```
