@@ -177,6 +177,12 @@ c     - CrossedOut
 reset - Reset
 ```
 
+## Contributing
+
+Contributions in the form of pull requests, issues or just general feedback,
+are always welcome.  
+See [CONTRIBUTING.MD](CONTRIBUTING.md).
+
 ## References
 
 For more information see the [ANSI escape sequences](http://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
