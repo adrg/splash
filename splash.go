@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
+// Attributes.
 const (
-	// Attributes
 	Reset Property = iota
 	Bold
 	Dim
@@ -20,8 +20,8 @@ const (
 	CrossedOut
 )
 
+// Foreground colors.
 const (
-	// Foreground colors
 	Black Property = iota + 30
 	Red
 	Green
@@ -32,8 +32,8 @@ const (
 	White
 )
 
+// Background colors.
 const (
-	// Background colors
 	BgBlack Property = iota + 40
 	BgRed
 	BgGreen
