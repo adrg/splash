@@ -1,25 +1,35 @@
-![logo](https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/logo.png)
-======
-[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/adrg/splash)
-[![License: MIT](http://img.shields.io/badge/license-MIT-red.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+<h1 align="center">
+    <img src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/logo.png" alt="splash logo" />
+</h1>
 
-Splash is a small package which gives you the ability to style terminal output.
-It provides a set of types and functions to allow coloring and styling of
+<p align="center">
+    <a href="https://pkg.go.dev/github.com/adrg/splash">
+        <img alt="pkg.go.dev documentation" src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white" />
+    </a>
+    <a href="https://opensource.org/licenses/MIT" rel="nofollow">
+        <img alt="MIT license" src="https://img.shields.io/github/license/adrg/splash" />
+    </a>
+    <a href="https://goreportcard.com/report/github.com/adrg/splash">
+        <img alt="Go report card" src="https://goreportcard.com/badge/github.com/adrg/splash" />
+    </a>
+</p>
+
+Splash is a small package which allows styling terminal output.
+It provides a set of types and functions to facilitate coloring and styling of
 output text. It can be useful in CLI applications or logging libraries.
 
 The core of the package is the **Property** type. A property represents either
 a color (foreground or background) or a text attribute (bold, underline, etc.).
-The package also defines the **Style** type which is just a collection of
-properties. Styles provide the ability to store a group of properties and
-reuse them when needed.
+The package also defines the **Style** type which is a collection of properties.
+Styles provide the ability to store a group of properties and reuse them when needed.
 
 Both types come with the familiar [String](http://godoc.org/fmt#String),
 [Sprint](http://godoc.org/fmt#Sprint), [Sprintf](http://godoc.org/fmt#Sprintf)
-and [Sprintln](http://godoc.org/fmt#Sprintf) methods which are used exactly
-the same as the ones in package [fmt](http://godoc.org/fmt). Moreover, from a
-coding standpoint, there is no difference between using a property and a style.
+and [Sprintln](http://godoc.org/fmt#Sprintf) methods which are used the same as
+the ones in the [fmt](http://godoc.org/fmt) package. Moreover, from a coding
+standpoint, there is no difference between using a property and a style.
 
-Full documentation can be found at: http://godoc.org/github.com/adrg/splash
+Full documentation can be found at https://pkg.go.dev/github.com/adrg/splash.
 
 ## Installation
 ```
@@ -63,8 +73,8 @@ func main() {
 	fmt.Println(splash.Bold.Sprintf("%s%s", splash.Blue, "Don't feel blue!"))
 }
 ```
-Output:
-![properties output](https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/properties.png)
+
+<img alt="properties output" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/properties.png" width="100%">
 
 #### Styles
 ```go
@@ -118,11 +128,12 @@ func main() {
 	fmt.Println(fgBgAttrs.Sprint("Red foreground, green background, bold, reverse"))
 }
 ```
-Output:
-![styles output](https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/styles.png)
+
+<img alt="styles output" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/styles.png" width="100%">
 
 ## Property reference
-![property reference](https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/colors.png)
+
+<img alt="property reference" src="https://raw.githubusercontent.com/adrg/adrg.github.io/master/assets/projects/splash/colors.png" width="100%">
 
 **Foreground colors**
 ```
@@ -168,10 +179,13 @@ reset - Reset
 ```
 
 ## References
+
 For more information see the [ANSI escape sequences](http://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
-and [Terminal colors and formatting](http://misc.flogisoft.com/bash/tip_colors_and_formatting)
+and [Terminal colors and formatting](http://misc.flogisoft.com/bash/tip_colors_and_formatting).
 
 ## License
+
 Copyright (c) 2014 Adrian-George Bostan.
 
-This project is licensed under the [MIT license](http://opensource.org/licenses/MIT). See LICENSE for more details.
+This project is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+See [LICENSE](LICENSE) for more details.
